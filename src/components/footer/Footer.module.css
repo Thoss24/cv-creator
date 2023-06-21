@@ -1,0 +1,14 @@
+.footer {
+    display: flex;
+    justify-content: center;
+    height: 5vh;
+    width: 100% auto;
+    align-items: center;
+    box-shadow: 2px 1px 2px 1px;
+    gap: 4px;
+}
+
+.logo {
+    height: 35px;
+    width: 35px;
+}

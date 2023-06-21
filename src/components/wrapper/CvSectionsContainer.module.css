@@ -1,0 +1,6 @@
+.cv-sections-container {
+    display: flex;
+    height: 80vh;
+    width: 40vw;
+    box-shadow: 0 1px 3px 3px rgba(0, 0, 0, 0.25);
+}
