@@ -2,7 +2,7 @@ import Header from "./components/header/Header";
 import Footer from "./components/footer/Footer";
 import CvContainer from "./components/wrapper/CvContainer";
 import CvSectionsContainer from "./components/wrapper/CvSectionsContainer";
-import UserDetails from "./components/user_input/UserDetails";
+import PersonalInfo from "./components/user_input/PersonalInfo";
 
 function App() {
   return (
@@ -10,7 +10,7 @@ function App() {
       <Header />
       <CvContainer>
         <CvSectionsContainer>
-          <UserDetails />
+          <PersonalInfo />
         </CvSectionsContainer>
         <CvSectionsContainer></CvSectionsContainer>
       </CvContainer>
