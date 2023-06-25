@@ -1,11 +1,17 @@
 import CvContext from "../store/cv-context";
-import React, { useContext } from "react";
+import CvExperience from "./CvExperience";
+import React, { useContext, Fragment } from "react";
 
 const Cv = () => {
 
     const ctx = useContext(CvContext);
 
+    const test = () => {
+        console.log(ctx)
+    };
+
     return (
+        <Fragment>
         <div>
            <p>{ctx.firstName}</p>
            <p>{ctx.lastName}</p>
@@ -15,7 +21,10 @@ const Cv = () => {
            <p>{ctx.phoneNumber}</p>
            <p>{ctx.email}</p>
            <p>{ctx.description}</p>
+           <button onClick={test}>TEST</button>
         </div>
+       <CvExperience />
+        </Fragment>
     )
 };
 

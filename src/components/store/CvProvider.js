@@ -2,70 +2,82 @@ import CvContext from "./cv-context";
 import React, { useState } from "react";
 
 const CvProvider = (props) => {
+  const defaultCvState = {
+    firstName: "",
+    lastName: "",
+    title: "",
+    addressLineOne: "",
+    addressLineTwo: "",
+    addressLinesThree: "",
+    phoneNumber: 0,
+    email: "",
+    description: "",
+  };
 
-    const defaultCvState = {
-        firstName: '',
-        lastName: '',
-        title: '',
-        addressLineOne: '',
-        addressLineTwo: '',
-        addressLinesThree: '',
-        phoneNumber: 0,
-        email: '',
-        description: '',
-        experience: '',
-        company: '',
-        city: '',
-        jobStartDate: '',
-        jobEndDate: '',
-        universityName: '',
-        universityCity: '',
-        universitySubject: '',
-        universityStartDate: '',
-        universityEndDate: '',
-    };
+  const defaultExperienceState = {
+    position: "",
+    company: "",
+    city: "",
+    jobStartDate: "",
+    jobEndDate: "",
+  };
 
-    const [personalInfo, setPersonalInfo] = useState(defaultCvState);
+  const defaultEducationState = {
+    universityName: "",
+    universityCity: "",
+    universitySubject: "",
+    universityStartDate: "",
+    universityEndDate: "",
+  };
 
-    const addCvInfo = (items) => {
-        setPersonalInfo(items)
-    };
+  const [personalInfo, setPersonalInfo] = useState(defaultCvState);
+  const [experience, setExperience] = useState(defaultExperienceState);
+  const [education, setEducation] = useState(defaultEducationState);
 
-    const removeCvInfo = (items) => {
-        setPersonalInfo(items)
-    };
+  const addCvInfo = (items) => {
+    setPersonalInfo(items);
+    console.log(personalInfo);
+  };
 
-    console.log(personalInfo)
+  const removeCvInfo = (items) => {};
 
-    const context = {
-        firstName: personalInfo.firstName,
-        lastName: personalInfo.lastName,
-        title: personalInfo.title,
-        addressLineOne: personalInfo.addressLineOne,
-        addressLineTwo: personalInfo.addressLineTwo,
-        addressLinesThree: personalInfo.addressLinesThree,
-        phoneNumber: personalInfo.phoneNumber,
-        email: personalInfo.email,
-        description: personalInfo.description,
-        experience: personalInfo.experience,
-        company: personalInfo.company,
-        city: personalInfo.city,
-        jobStartDate: personalInfo.jobStartDate,
-        jobEndDate: personalInfo.jobEndDate,
-        universityName: personalInfo.universityName,
-        universityCity: personalInfo.universityCity,
-        universitySubject: personalInfo.universitySubject,
-        universityStartDate: personalInfo.universityStartDate,
-        universityEndDate: personalInfo.universityEndDate,
-        addCvInfo: addCvInfo,
-        removeCvInfo: removeCvInfo
-    };
+  const addCvExperience = (items) => {
+    setExperience(items);
+  };
 
-    return (
-        <CvContext.Provider value={context}>
-            {props.children}
-        </CvContext.Provider>
-    )
+  const removeCvExperience = () => {};
+
+  console.log(personalInfo);
+
+  const context = {
+    firstName: personalInfo.firstName,
+    lastName: personalInfo.lastName,
+    title: personalInfo.title,
+    addressLineOne: personalInfo.addressLineOne,
+    addressLineTwo: personalInfo.addressLineTwo,
+    addressLinesThree: personalInfo.addressLinesThree,
+    phoneNumber: personalInfo.phoneNumber,
+    email: personalInfo.email,
+    description: personalInfo.description,
+    position: experience.position,
+    company: experience.company,
+    city: experience.city,
+    jobStartDate: experience.jobStartDate,
+    jobEndDate: experience.jobEndDate,
+    universityName: education.universityName,
+    universityCity: education.universityCity,
+    universitySubject: education.universitySubject,
+    universityStartDate: education.universityStartDate,
+    universityEndDate: education.universityEndDate,
+    addCvInfo: addCvInfo,
+    removeCvInfo: removeCvInfo,
+    addCvExperience: addCvExperience,
+    removeCvExperience: removeCvExperience,
+  };
+
+  return (
+    <CvContext.Provider value={context}>{props.children}</CvContext.Provider>
+  );
 };
 
-export default CvProvider
+export default CvProvider;
