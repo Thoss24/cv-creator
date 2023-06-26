@@ -1,14 +1,11 @@
 import CvContext from "../store/cv-context";
 import CvExperience from "./CvExperience";
+import CvEducation from "./CvEducation";
 import React, { useContext, Fragment } from "react";
 
 const Cv = () => {
 
     const ctx = useContext(CvContext);
-
-    const test = () => {
-        console.log(ctx)
-    };
 
     return (
         <Fragment>
@@ -21,9 +18,9 @@ const Cv = () => {
            <p>{ctx.phoneNumber}</p>
            <p>{ctx.email}</p>
            <p>{ctx.description}</p>
-           <button onClick={test}>TEST</button>
         </div>
        <CvExperience />
+       <CvEducation />
         </Fragment>
     )
 };

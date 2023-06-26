@@ -112,7 +112,7 @@ const PersonalInfo = () => {
           ref={description}
         />
       </div>
-      <Button name="Add Personal Info" />
+      <Button name="Update Personal Info" />
       <Button onClick={deletePersonalInfoHandler} name="Delete Personal Info" />
     </form>
   );

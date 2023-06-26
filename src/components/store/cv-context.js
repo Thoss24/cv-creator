@@ -24,6 +24,8 @@ const CvContext = React.createContext({
   removeCvInfo: (items) => {},
   addCvExperience: (items) => {},
   removeCvExperience: (items) => {},
+  addCvEducation: (items) => {},
+  removeCvEducation: (items) => {}
 });
 
 export default CvContext;

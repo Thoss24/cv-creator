@@ -35,19 +35,13 @@ const Experience = () => {
                 <input type="text" placeholder='Experience' className={classes.input} ref={position}/>
                 <input type="text" placeholder='Company' className={classes.input} ref={company}/>
                 <input type="text" placeholder='City' className={classes.input} ref={city}/>
-                <input type="date" placeholder='Start Date' className={classes.input} ref={startDate}/>
-                <input type="date" placeholder='End Date' className={classes.input} ref={endDate}/>
+                <input type="text" placeholder='From' className={classes.input} ref={startDate}/>
+                <input type="text" placeholder='To' className={classes.input} ref={endDate}/>
             </div>
-            <Button name='Add Experience'/>
+            <Button name='Update Experience'/>
             <Button onClick={removeExperienceHandler} name="Delete Experience"/>
         </form>
     )
 };
-
-/* experience: '',
-company: '',
-city: '',
-jobStartDate: '',
-jobEndDate: '', */
 
 export default Experience;

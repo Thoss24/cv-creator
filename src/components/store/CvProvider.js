@@ -9,7 +9,7 @@ const CvProvider = (props) => {
     addressLineOne: "",
     addressLineTwo: "",
     addressLinesThree: "",
-    phoneNumber: 0,
+    phoneNumber: "",
     email: "",
     description: "",
   };
@@ -36,18 +36,30 @@ const CvProvider = (props) => {
 
   const addCvInfo = (items) => {
     setPersonalInfo(items);
-    console.log(personalInfo);
   };
 
-  const removeCvInfo = (items) => {};
+  const removeCvInfo = (items) => {
+    setPersonalInfo(items)
+  };
 
   const addCvExperience = (items) => {
     setExperience(items);
   };
 
-  const removeCvExperience = () => {};
+  const removeCvExperience = (items) => {
+    setExperience(items)
+  };
 
-  console.log(personalInfo);
+  const addCvEducation = (items) => {
+    setEducation(items);
+  };
+
+  const removeCvEducation = (items) => {
+    setEducation(items)
+    console.log(items)
+    console.log(education)
+  };
+
 
   const context = {
     firstName: personalInfo.firstName,
@@ -73,6 +85,8 @@ const CvProvider = (props) => {
     removeCvInfo: removeCvInfo,
     addCvExperience: addCvExperience,
     removeCvExperience: removeCvExperience,
+    addCvEducation: addCvEducation,
+    removeCvEducation: removeCvEducation
   };
 
   return (
