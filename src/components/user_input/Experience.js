@@ -25,7 +25,14 @@ const Experience = () => {
     };
 
     const removeExperienceHandler = (event) => {
-        event.preventDefault()
+        event.preventDefault();
+        ctx.removeCvExperience({
+            position: '',
+            company: '',
+            city: '',
+            startDate: '',
+            endDate: ''
+        });
     };
 
     return (
