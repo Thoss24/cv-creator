@@ -16,11 +16,11 @@ const CvPersonalInfo = () => {
         </div>
         <div className={classes["contact-info"]}>
           <p>
-            <strong>M: </strong>
+            <strong>Mobile: </strong>
             {ctx.phoneNumber}
           </p>
           <p>
-            <strong>E: </strong>
+            <strong>Email: </strong>
             {ctx.email}
           </p>
         </div>
@@ -30,7 +30,11 @@ const CvPersonalInfo = () => {
           <p>{ctx.addressLinesThree}</p>
         </div>
       </div>
+      <div className={classes.divider}></div>
+      <div className={classes['description-container']}>
+      <h3>Professional Summary</h3>
       <p>{ctx.description}</p>
+      </div>
     </Fragment>
   );
 };

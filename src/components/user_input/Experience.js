@@ -19,8 +19,8 @@ const Experience = () => {
             position: position.current.value,
             company: company.current.value,
             city: city.current.value,
-            startDate: startDate.current.value,
-            endDate: endDate.current.value
+            jobStartDate: startDate.current.value,
+            jobEndDate: endDate.current.value
         });
     };
 
@@ -30,8 +30,8 @@ const Experience = () => {
             position: '',
             company: '',
             city: '',
-            startDate: '',
-            endDate: ''
+            jobStartDate: '',
+            jobEndDate: ''
         });
     };
 

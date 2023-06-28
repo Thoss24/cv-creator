@@ -1,0 +1,8 @@
+h3 {
+    color: darkblue;
+}
+
+.work-history-container {
+    display: flex;
+    flex-direction: row;
+}

@@ -5,8 +5,12 @@
     width: 40vw;
     box-shadow: 0 1px 3px 3px rgba(0, 0, 0, 0.25);
     margin: 12px 12px 12px 12px;
-    overflow: auto;
+    overflow-y: auto;
     height: 85vh;
+}
+
+textarea, input {
+    padding-left: 3px;
 }
 
 
